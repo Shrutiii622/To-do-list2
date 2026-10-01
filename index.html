@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Pretty To-Do List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="app">
+  <h1>✨ My To-Do List ✨</h1>
+  <p class="tagline">Little steps, big sparkle 🌸</p>
+
+  <!-- Progress bar -->
+  <div class="progress" aria-hidden="true"><div id="progress-fill" class="progress-fill"></div></div>
+
+  <!-- Add a task -->
+  <form id="task-form" class="add">
+    <label for="task-input" class="sr-only">New task</label>
+    <input id="task-input" type="text" placeholder="What's on your list today? 💕" autocomplete="off" required>
+    <button type="submit" class="btn">Add task</button>
+  </form>
+
+  <!-- Task list -->
+  <ul id="task-list" class="tasks"></ul>
+
+  <!-- Empty message (shown by JavaScript when there are no tasks) -->
+  <p id="empty" class="empty" hidden>🌷 No tasks yet. Add your first one above.</p>
+
+  <!-- Footer: count + clear button -->
+  <div class="bar">
+    <span id="count">0 tasks left</span>
+    <button id="clear" class="link" type="button">Clear completed</button>
+  </div>
+
+  <!-- Shown when every task is done -->
+  <p id="cheer" class="cheer" hidden>🎉 All done! You did amazing, queen 👑</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
